@@ -1564,13 +1564,18 @@ code {
     left: auto;
   }
 }
-header.vertical {
+header {
   position: relative;
 }
+
 header.vertical figure {
   float: left;
   width: 40%;
   max-width: 40%;
+}
+header.vertical figure img {
+  width: 100%;
+  max-width: 100%;
 }
 header.vertical .headline {
   float: left;
@@ -1579,6 +1584,20 @@ header.vertical .headline {
   position: absolute;
   left: 40%;
   bottom: 8.3333%;
+}
+
+header.horizontal figure, header.horizontal figure img {
+  width: 100%;
+  max-width: 100%;
+}
+header.horizontal .headline {
+  position: absolute;
+  left: 2rem;
+  bottom: 12%;
+}
+header.horizontal h1, header.horizontal entry-meta {
+  background: #000;
+  color: #fff;
 }
 
 .entry-content figure {

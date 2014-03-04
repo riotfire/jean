@@ -22,8 +22,8 @@
 			<header class="<?php echo $orient; ?>">
 				<?php if ( has_post_thumbnail() ) { echo '<figure>'; the_post_thumbnail('fd-lrg'); echo '</figure>'; } ?>
 				<section class="headline">
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-					<div class="entry-meta"><?php reverie_entry_meta(); ?></div>
+					<h1 class="entry-title"><span><?php the_title(); ?></span></h1>
+					<div class="entry-meta"><span><?php reverie_entry_meta(); ?></span></div>
 				</section>
 			</header>
 

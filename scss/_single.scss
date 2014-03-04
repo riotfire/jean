@@ -1,13 +1,21 @@
 
 @import "foundation/components/grid";
 
-header.vertical {
+header {
 	position:relative;
+}
+
+header.vertical {
 
 	figure {
 		float:left;
 		width:40%;
 		max-width:40%;
+	}
+
+	figure img {
+		width:100%;
+		max-width:100%;
 	}
 
 	.headline {
@@ -17,6 +25,26 @@ header.vertical {
 		position:absolute;
 		left:40%;
 		bottom:8.3333%;
+	}
+
+}
+
+header.horizontal {
+
+	figure, figure img{
+		width:100%;
+		max-width:100%;
+	}
+
+	.headline {
+		position:absolute;
+		left:2rem;
+		bottom:12%;
+	}
+
+	h1, entry-meta {
+		background:#000;
+		color:#fff;
 	}
 
 }
