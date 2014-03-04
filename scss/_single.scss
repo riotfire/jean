@@ -1,0 +1,39 @@
+
+@import "foundation/components/grid";
+
+header.vertical {
+	position:relative;
+
+	figure {
+		float:left;
+		width:40%;
+		max-width:40%;
+	}
+
+	.headline {
+		float:left;
+		width:55%;
+		padding:0 30px;
+		position:absolute;
+		left:40%;
+		bottom:8.3333%;
+	}
+
+}
+
+.entry-content figure {
+	margin-top:1.5rem;
+	margin-left:-10%;
+}
+
+header.none {
+	@include grid-row;
+}
+
+.none .headline {
+	@include grid-column(12);
+}
+
+#respond {
+	@include grid-column($columns:8,$push:1);
+}

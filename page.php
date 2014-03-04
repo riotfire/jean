@@ -1,7 +1,11 @@
-<?php get_header(); ?>
+<?php
+/*
+Template Name: Sidebar Left
+*/
+get_header(); ?>
 
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" id="content" role="main">
+	<div class="small-12 large-8 medium-offest-2 large-offset-2 columns " id="content" role="main">
 	
 	<?php /* Start loop */ ?>
 	<?php while (have_posts()) : the_post(); ?>
@@ -20,6 +24,5 @@
 	<?php endwhile; // End the loop ?>
 
 	</div>
-	<?php get_sidebar(); ?>
 		
 <?php get_footer(); ?>

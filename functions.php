@@ -47,7 +47,7 @@ function reverie_theme_support() {
     // Add post thumbnail supports. http://codex.wordpress.org/Post_Thumbnails
     add_theme_support('post-thumbnails');
     // set_post_thumbnail_size(150, 150, false);
-    add_image_size('fd-lrg', 1024, 99999);
+    add_image_size('fd-lrg', 1140, 99999);
     add_image_size('fd-med', 768, 99999);
     add_image_size('fd-sm', 320, 9999);
 
@@ -107,4 +107,19 @@ if (!function_exists('reverie_entry_meta')) :
         echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. get_the_time('F jS, Y') .'</time>';
     }
 endif;
+
+
+
+//
+// Added by DH
+//
+$args = array(
+    'flex-width'    => true,
+    'width'         => 1300,
+    'flex-height'    => true,
+    'height'        => 500,
+    'default-image' => get_template_directory_uri() . '/img/header.jpg',
+    'default-text-color'     => 'fff',
+);
+add_theme_support( 'custom-header', $args );
 ?>

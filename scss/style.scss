@@ -19,6 +19,13 @@
 @import "compass/css3/shared";
 @import "compass/css3/border-radius";
 @import "compass/css3/transition";
+@import "typebase";
+@import "homepage";
+@import "single";
+@import "custom";
+
+
+
 
 /* Start to customize Reverie */
 
@@ -32,24 +39,19 @@ figure {
 	margin: 0 auto $panel-margin-bottom;
 }
 
-// Add class for images
-figure img {
-	@include border-radius(5px);
-}
-
 img.alignright {
 	float: right;
-	margin: 0 0 18px 18px;
+	margin: 0 0 1.5rem 1.5rem;
 }
 	
 img.alignleft {
 	float: left;
-	margin: 0 18px 18px 0;
+	margin: 0 1.5rem 1.5rem 0;
 }
 
 img.aligncenter {
 	display: block;
-	margin: 18px auto;
+	margin: 1.5rem auto;
 	}
 
 // Fix gallery images display
@@ -81,27 +83,26 @@ figure.figure {
 
 figure.alignright.figure {
 	float: right;
-	margin: 0 0 18px 18px;
+	margin: 1.5rem 0 0 1.5rem;
 }
 
 figure.alignleft.figure {
 	float: left;
-	margin: 0 18px 18px 0;
+	margin: 1.5rem 1.5rem 0 0;
 }
 
 .footer-widget {
-	background-color: #eee;
+	background-color: #fff;
 }
 
 body > header.contain-to-grid {
-	margin-bottom: rem-calc(32);
+	// margin-bottom: rem-calc(32);
 	max-width: 100%;
 	padding-bottom: 0;
 }
 
 #content {
 	background-color: #fff;
-	border: 1px solid #ddd;
 }
 
 .index-card {
@@ -124,7 +125,7 @@ time {
 }
 
 // define content padding for later use
-$content-padding: rem-calc(50);
+$content-padding: rem-calc(30);
 
 .entry-author {
 	background-color: #fbfbfb;
@@ -148,10 +149,12 @@ $content-padding: rem-calc(50);
 	}
 }
 
-.post header,
+/* .post header,
 .page header {
 	margin-bottom: rem-calc(20);
 }
+
+*/
 
 .entry-tags {
 	color: #999;

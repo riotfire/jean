@@ -1,9 +1,14 @@
 @import "settings";
-@import "foundation";
+//@import "foundation";
+@import "foundation/components/visibility";
+@import "foundation/components/grid";
+@import "foundation/components/offcanvas";
+@import "foundation/components/buttons";
+@import "foundation/components/forms";
 
 
 header {
-  @include grid-row;
+  // @include grid-row;
   
   .logo  { @include grid-column($columns:3, $center:true); }
   padding-bottom: em-calc(10px);
