@@ -18,7 +18,7 @@
 			<p><?php reverie_entry_meta(); ?></p>
 		</header>
 		<section class="excerpt">
-			<?php the_excerpt(); ?>	<a href="<?php the_permalink(); ?>">...Continue Reading</a>
+			<?php the_excerpt(); ?>
 		</section>
 	</div>
 
