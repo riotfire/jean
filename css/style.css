@@ -306,7 +306,7 @@ code {
 }
 
 /* Misc Font Declarations */
-.top-bar-section ul li > a {
+.top-bar-section ul li > a, .menu-icon {
   font-family: "Alegreya Sans SC", sans-serif;
 }
 

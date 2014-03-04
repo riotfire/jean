@@ -2353,7 +2353,7 @@ meta.foundation-mq-topbar {
   color: white;
   text-transform: uppercase;
   font-size: 0.8125rem;
-  font-weight: bold;
+  font-weight: normal;
   position: relative;
   display: block;
   padding: 0 15px;
