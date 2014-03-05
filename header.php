@@ -56,8 +56,8 @@
 		<img class="header-image" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>"  />
 		<div class="row">
 			<a class="home-link row" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<h1 class="site-title large-12 small-12 columns" style="color: #<?php echo get_header_textcolor(); ?>"><?php bloginfo( 'name' ); ?></h1>
-				<h2 class="site-description large-12 small-12 columns" style="color: #<?php echo get_header_textcolor(); ?>"><?php bloginfo( 'description' ); ?></h2>
+				<h1 class="site-title large-12 small-12 columns" ><?php bloginfo( 'name' ); ?></h1>
+				<h2 class="site-description large-12 small-12 columns" ><?php bloginfo( 'description' ); ?></h2>
 			</a>
 		</div>
 	</div>

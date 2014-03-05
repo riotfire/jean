@@ -120,13 +120,65 @@ $args = array(
     'height'        => 500,
     'default-image' => get_template_directory_uri() . '/img/header.jpg',
     'default-text-color'     => 'fff',
+    'wp-head-callback'       => 'shape_header_style',
 );
 add_theme_support( 'custom-header', $args );
+
+if ( ! function_exists( 'shape_header_style' ) ) :
+/**
+ * Styles the header image and text displayed on the blog
+ *
+ * @see shape_custom_header_setup().
+ *
+ * @since Shape 1.0
+ */
+function shape_header_style() {
+ 
+    // If no custom options for text are set, let's bail
+    // get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
+    if ( HEADER_TEXTCOLOR == get_header_textcolor() && '' == get_header_image() )
+        return;
+    // If we get this far, we have custom styles. Let's do this.
+    ?>
+    <style type="text/css">
+    <?php
+        // Do we have a custom header image?
+        if ( '' != get_header_image() ) :
+    ?>
+        .site-header img {
+            display: block;
+        }
+    <?php endif;
+ 
+        // Has the text been hidden?
+        if ( 'blank' == get_header_textcolor() ) :
+    ?>
+        .site-title,
+        .site-description {
+            position: absolute !important;
+            clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+            clip: rect(1px, 1px, 1px, 1px);
+        }
+
+    <?php
+        // If the user has set a custom color for the text use that
+        else :
+    ?>
+        .site-title,
+        .site-title a,
+        .site-description {
+            color: #<?php echo get_header_textcolor(); ?> !important;
+        }
+    <?php endif; ?>
+    </style>
+    <?php
+}
+endif; // shape_header_style
 
 
 
 function new_excerpt_more( $more ) {
-    return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Continue Reading</a>';
+    return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">...Continue Reading</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
