@@ -62,7 +62,7 @@
 	<script>
 
 		vH = window.innerHeight;
-		jQuery('.post header.vertical, .post header.horizontal').height(vH);
+		jQuery('.post header.vertical, .post header.horizontal').css('min-height', vH);
 
 
 	</script

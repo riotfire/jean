@@ -5,12 +5,21 @@ header {
 	position:relative;
 }
 
+.post header figure {
+	margin-bottom:0;
+}
+
 header.vertical {
 
 	figure {
-		float:left;
-		width:40%;
-		max-width:40%;
+		width:100%;
+		max-width:100%;
+
+		@media #{$medium-up}{
+			float:left;
+			width:40%;
+			max-width:40%;
+		}
 	}
 
 	figure img {
@@ -19,12 +28,22 @@ header.vertical {
 	}
 
 	.headline {
-		float:left;
-		width:55%;
-		padding:0 30px;
-		position:absolute;
-		left:40%;
-		bottom:8.3333%;
+		position: static;
+
+		@media #{$medium-up}{
+			float:left;
+			width:55%;
+			padding:0 30px;
+			position:absolute;
+			left:40%;
+			bottom:8.3333%;
+		}
+	}
+
+	h1, .entry-meta {
+		background:#000;
+		color:#fff;
+		margin-top:0;
 	}
 
 }
@@ -37,14 +56,18 @@ header.horizontal {
 	}
 
 	.headline {
-		position:absolute;
-		left:2rem;
-		bottom:12%;
+
+		@media #{$medium-up}{
+			position:absolute;
+			left:2rem;
+			bottom:12%;
+		}
 	}
 
-	h1, entry-meta {
+	h1, .entry-meta {
 		background:#000;
 		color:#fff;
+		margin-top:0;
 	}
 
 }

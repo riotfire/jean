@@ -397,7 +397,7 @@ code {
   }
 }
 
-.post-link {
+.post-link, .entry-title {
   background: #000;
   color: #fff;
   position: relative;
@@ -1622,36 +1622,59 @@ header {
   position: relative;
 }
 
+.post header figure {
+  margin-bottom: 0;
+}
+
 header.vertical figure {
-  float: left;
-  width: 40%;
-  max-width: 40%;
+  width: 100%;
+  max-width: 100%;
+}
+@media only screen and (min-width: 40.063em) {
+  header.vertical figure {
+    float: left;
+    width: 40%;
+    max-width: 40%;
+  }
 }
 header.vertical figure img {
   width: 100%;
   max-width: 100%;
 }
 header.vertical .headline {
-  float: left;
-  width: 55%;
-  padding: 0 30px;
-  position: absolute;
-  left: 40%;
-  bottom: 8.3333%;
+  position: static;
+}
+@media only screen and (min-width: 40.063em) {
+  header.vertical .headline {
+    float: left;
+    width: 55%;
+    padding: 0 30px;
+    position: absolute;
+    left: 40%;
+    bottom: 8.3333%;
+  }
+}
+header.vertical h1, header.vertical .entry-meta {
+  background: #000;
+  color: #fff;
+  margin-top: 0;
 }
 
 header.horizontal figure, header.horizontal figure img {
   width: 100%;
   max-width: 100%;
 }
-header.horizontal .headline {
-  position: absolute;
-  left: 2rem;
-  bottom: 12%;
+@media only screen and (min-width: 40.063em) {
+  header.horizontal .headline {
+    position: absolute;
+    left: 2rem;
+    bottom: 12%;
+  }
 }
-header.horizontal h1, header.horizontal entry-meta {
+header.horizontal h1, header.horizontal .entry-meta {
   background: #000;
   color: #fff;
+  margin-top: 0;
 }
 
 .entry-content figure {
