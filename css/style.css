@@ -401,6 +401,7 @@ code {
   background: #000;
   color: #fff;
   position: relative;
+  word-wrap: break-word;
   z-index: 1;
 }
 
