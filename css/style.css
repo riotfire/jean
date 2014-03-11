@@ -401,8 +401,12 @@ code {
   background: #000;
   color: #fff;
   position: relative;
-  word-wrap: break-word;
   z-index: 1;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 .row {
