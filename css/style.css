@@ -1654,11 +1654,6 @@ header.vertical .headline {
     bottom: 8.3333%;
   }
 }
-header.vertical h1, header.vertical .entry-meta {
-  background: #000;
-  color: #fff;
-  margin-top: 0;
-}
 
 header.horizontal figure, header.horizontal figure img {
   width: 100%;
